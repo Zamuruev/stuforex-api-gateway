@@ -21,7 +21,7 @@ spring:
         - id: user-service
           uri: ${USER_SERVICE_URL:http://localhost:8081}
           predicates:
-            - Path=/api/auth/**, /api/users/**, /api/ads/**, /api/admin/ads/**, /api/profile/**, /api/leaderboard/**, /api/notifications/**
+            - Path=/api/auth/**, /api/users/**, /api/ads/**, /api/admin/**, /api/profile/**, /api/leaderboard/**, /api/notifications/**
 
         - id: task-service
           uri: ${TASK_SERVICE_URL:http://localhost:8082}
