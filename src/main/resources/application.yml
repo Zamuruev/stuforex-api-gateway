@@ -18,6 +18,11 @@ spring:
             maxAge: 3600
 
       routes:
+        - id: chat-service-uploads
+          uri: ${CHAT_SERVICE_URL:http://localhost:8083}
+          predicates:
+            - Path=/uploads/chat/**
+
         - id: user-service-uploads
           uri: ${USER_SERVICE_URL:http://localhost:8081}
           predicates:
